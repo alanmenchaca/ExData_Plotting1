@@ -4,6 +4,7 @@ download_hpc_data <- function() {
   
   if(!file.exists(data_file)){
     dir.create("data")
+    dir.create("plots")
     download.file(fileUrl, destfile = data_file)
     unzip(data_file, exdir = "./data")
   }  
